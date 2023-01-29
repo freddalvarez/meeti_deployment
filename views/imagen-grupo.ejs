@@ -1,0 +1,20 @@
+<main class="contenedor contenedor-formularios no-padding">
+    <h1><%= nombrePagina  %> </h1>
+    <form  class="default-form"  method="POST" enctype="multipart/form-data">
+        <% if(grupo.imagen) { %>
+            <div class="campo">
+                <label for="imagen">Imagen Actual</label>
+                <img src="/uploads/grupos/<%= grupo.imagen %>" width="200" alt="Imagen Grupo">
+            </div>
+        <% } else { %>
+            <p>No hay imagen Actual</p>
+        <% } %>
+        <div class="campo">
+            <label for="imagen">Imagen</label>
+            <input type="file" id="imagen" name="imagen">
+        </div>
+        <div class="campo enviar ">
+            <input type="submit" class="btn btn-rosa" value="Subir Imagen">
+        </div>
+    </form>
+</main>
